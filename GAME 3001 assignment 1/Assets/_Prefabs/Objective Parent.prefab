@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1345610422769561024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.749939, y: 1.3881226, z: 0}
+  m_LocalPosition: {x: -5.5022583, y: 1.8607483, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,5 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeekPrefab: {fileID: 3868851740017265329, guid: ae8e334fd104f5c4bbe9f0fab30f501c, type: 3}
+  playerFleePrefab: {fileID: 3577364535215355961, guid: d30a9fedce1f38742a5fe5e11ceab634, type: 3}
+  playerArrivePrefab: {fileID: 9126650533919524404, guid: a801fa7e0d8434a48bf72db2e5684872, type: 3}
+  playerAvoidPrefab: {fileID: 4380454260473796158, guid: b2d6cfc1fa21e7946a3f5687f3a3e2a3, type: 3}
   objectivePrefab: {fileID: 1345610422769561024}
+  obstaclePrefab: {fileID: 8331400173428040653, guid: ceba3bf5dd73a3f4ca14709a646e5440, type: 3}
+  startMaker: {fileID: 8583914942989308698, guid: b2d6cfc1fa21e7946a3f5687f3a3e2a3, type: 3}
+  endMaker: {fileID: 1008849646427073766}
   m_target: {fileID: 1008849646427073766}

@@ -29,7 +29,7 @@ public class FleeMovement : Objective
     // Update is called once per frame
     void Update()
     {
-        TargetPosition = GameObject.Find("Objective Parent(Clone)").transform.position;
+        TargetPosition = GameObject.Find("Obstacle Parent(Clone)").transform.position;
         if (TargetPosition != (null)) //new Vector3(0.00f, 0.00f, 0.00f)
         {
             SeekForward();

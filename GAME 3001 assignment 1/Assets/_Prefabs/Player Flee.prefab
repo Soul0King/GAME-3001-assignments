@@ -186,12 +186,16 @@ MonoBehaviour:
   playerSeekPrefab: {fileID: 3868851740017265329, guid: ae8e334fd104f5c4bbe9f0fab30f501c, type: 3}
   playerFleePrefab: {fileID: 3577364535215355961}
   playerArrivePrefab: {fileID: 9126650533919524404, guid: a801fa7e0d8434a48bf72db2e5684872, type: 3}
+  playerAvoidPrefab: {fileID: 4380454260473796158, guid: b2d6cfc1fa21e7946a3f5687f3a3e2a3, type: 3}
   objectivePrefab: {fileID: 1345610422769561024, guid: 32036c37441dd9c4ea7f29d73fe36153, type: 3}
+  obstaclePrefab: {fileID: 8331400173428040653, guid: ceba3bf5dd73a3f4ca14709a646e5440, type: 3}
+  startMaker: {fileID: 8583914942989308698, guid: b2d6cfc1fa21e7946a3f5687f3a3e2a3, type: 3}
+  endMaker: {fileID: 1008849646427073766, guid: 32036c37441dd9c4ea7f29d73fe36153, type: 3}
   m_target: {fileID: 1008849646427073766, guid: 32036c37441dd9c4ea7f29d73fe36153, type: 3}
   movementSpeed: 5
   rotationSpeed: 360
   player: {fileID: 3577364535215355961}
-  targetObject: {fileID: 1008849646427073766, guid: 32036c37441dd9c4ea7f29d73fe36153, type: 3}
+  targetObject: {fileID: 7501970626784205332, guid: ceba3bf5dd73a3f4ca14709a646e5440, type: 3}
 --- !u!50 &-6047695608541290003
 Rigidbody2D:
   serializedVersion: 4
