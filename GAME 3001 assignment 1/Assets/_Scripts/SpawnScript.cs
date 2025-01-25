@@ -6,6 +6,8 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class SpawnScript : MonoBehaviour
 {
     [SerializeField] public GameObject playerSeekPrefab;
+    [SerializeField] public GameObject playerFleePrefab;
+    [SerializeField] public GameObject playerArrivePrefab;
     [SerializeField] public GameObject objectivePrefab;
 
     
@@ -26,17 +28,38 @@ public class SpawnScript : MonoBehaviour
             SpawnSeek();
         }
         
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            
+            SpawnFlee();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            
+            SpawnArrive();
+        }
+        
     }
 
     public void SpawnSeek()
     {
-
         GameObject objectiveInst = Instantiate(objectivePrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
-        GameObject playerInst = Instantiate(playerSeekPrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
-        
-
-        
+        GameObject playerSeekInst = Instantiate(playerSeekPrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
     }
+
+    public void SpawnFlee()
+    {
+        GameObject objectiveInst = Instantiate(objectivePrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
+        GameObject playerSeekInst = Instantiate(playerFleePrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
+    }
+
+    public void SpawnArrive()
+    {
+        GameObject objectiveInst = Instantiate(objectivePrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
+        GameObject playerSeekInst = Instantiate(playerArrivePrefab, new Vector3(Random.Range(-7.5f, 7.5f), Random.Range(-4.5f, 4.5f), 0f), Quaternion.identity, transform);
+    }
+
 }
 
 

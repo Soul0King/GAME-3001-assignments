@@ -184,6 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSeekPrefab: {fileID: 3868851740017265329}
+  playerFleePrefab: {fileID: 3577364535215355961, guid: d30a9fedce1f38742a5fe5e11ceab634, type: 3}
+  playerArrivePrefab: {fileID: 9126650533919524404, guid: a801fa7e0d8434a48bf72db2e5684872, type: 3}
   objectivePrefab: {fileID: 1345610422769561024, guid: 32036c37441dd9c4ea7f29d73fe36153, type: 3}
   m_target: {fileID: 1008849646427073766, guid: 32036c37441dd9c4ea7f29d73fe36153, type: 3}
   movementSpeed: 5

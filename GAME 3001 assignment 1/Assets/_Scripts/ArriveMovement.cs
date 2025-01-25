@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 
-public class FleeMovement : Objective
+public class ArriveMovement : Objective
 {
 
     [SerializeField] float movementSpeed;
@@ -41,10 +41,6 @@ public class FleeMovement : Objective
         {
             Destroy(gameObject);
         }
-        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp(pos.x, 0.05f, 0.95f);
-        pos.y = Mathf.Clamp(pos.y, 0.05f, 0.95f);
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
     private void SeekForward() //  a seek with rotation to target but onlu moving along forward vector
@@ -65,9 +61,10 @@ public class FleeMovement : Objective
         LookAt2D(TargetPosition);
         Debug.Log("looking at" + TargetPosition);
 
+        float dist = Vector3.Distance(TargetPosition, transform.position);
 
         //move along the forward vector using rigidbody2D
-        rb.velocity = transform.up * movementSpeed;
+        rb.velocity = transform.up * (dist - 0.5f);
 
         //transform.Translate(transform.up * movementSpeed);
 
@@ -77,6 +74,6 @@ public class FleeMovement : Objective
     {
         Vector3 lookDirection = target - transform.position;
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis((angle + 90), Vector3.forward);
+        transform.rotation = Quaternion.AngleAxis((angle - 90), Vector3.forward);
     }
 }
